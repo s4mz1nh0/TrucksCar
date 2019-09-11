@@ -2,13 +2,14 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
-
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <bottom>
@@ -21,20 +22,36 @@
    <center>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <GridPane prefHeight="365.0" prefWidth="288.0">
+            <GridPane prefHeight="365.0" prefWidth="288.0" vgap="30.0">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button mnemonicParsing="false" prefHeight="105.0" prefWidth="120.0" text="Button" />
-                  <Button mnemonicParsing="false" prefHeight="105.0" prefWidth="120.0" text="Button" GridPane.columnIndex="1" />
-                  <Button mnemonicParsing="false" prefHeight="105.0" prefWidth="120.0" text="Button" GridPane.rowIndex="1" />
-                  <Button mnemonicParsing="false" prefHeight="105.0" prefWidth="120.0" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Button contentDisplay="TOP" mnemonicParsing="false" prefHeight="105.0" prefWidth="120.0" text="Ator" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imagens/ator.png" />
+                           </image></ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="16.0" />
+                     </font></Button>
+                  <Button contentDisplay="TOP" mnemonicParsing="false" prefHeight="105.0" prefWidth="120.0" text="Filme" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imagens/filme.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="16.0" />
+                     </font></Button>
                </children>
             </GridPane>
          </children>
