@@ -45,7 +45,7 @@
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor></Button>
-                  <Button contentDisplay="TOP" mnemonicParsing="false" prefHeight="105.0" prefWidth="120.0" text="Filme" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#abrirJanelaFilme" prefHeight="105.0" prefWidth="120.0" text="Filme" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <graphic>
                         <ImageView fitHeight="45.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
                            <image>

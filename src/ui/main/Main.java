@@ -25,6 +25,8 @@ public class Main extends Application {
         //Abrir maximizado
         stage.setMaximized(true);
         
+        
+        
         stage.setScene(scene);
         stage.show();
     }
