@@ -1,5 +1,6 @@
 package dados.entidades;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -8,7 +9,7 @@ public class Filme {
     private Integer id;
     private String nome;
     private LocalDate dataDeLancamento;
-    private Double arrecadacao;
+    private BigDecimal arrecadacao;
     private Genero genero;
     private ArrayList<Ator> atores;
 
@@ -36,11 +37,11 @@ public class Filme {
         this.dataDeLancamento = dataDeLancamento;
     }
 
-    public Double getArrecadacao() {
+    public BigDecimal getArrecadacao() {
         return arrecadacao;
     }
 
-    public void setArrecadacao(Double arrecadacao) {
+    public void setArrecadacao(BigDecimal arrecadacao) {
         this.arrecadacao = arrecadacao;
     }
 
