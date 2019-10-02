@@ -1,34 +1,29 @@
 package teste;
 
 import dados.entidades.Ator;
-import javax.persistence.*;
+import javax.persistence.EntityManager;
 import util.JPAUtil;
 
-public class TestaAtor {
+public class EditaAtor {
     
     public static void main(String[] args) {
-        
-        //Criando um objeto ator
-        Ator a1 = new Ator();
-        a1.setNome("David Gonçalves");
-        
-        Ator a2 = new Ator();
-        a2.setNome("Petrônio Augusto");
         
         //Pegando o gerenciador de acesso ao BD
         EntityManager gerenciador = JPAUtil.getGerenciador();
         
+        //Buscando um ator pelo id (segundo parametro)
+        Ator a = gerenciador.find(Ator.class, 1);
+        
+        //Editando o nome (colocando um novo nome)
+        a.setNome("Samuel Santana");
+        
         //Iniciar a transação
         gerenciador.getTransaction().begin();
         
-        //Mandando persistir o objeto
-        gerenciador.persist(a1);
-        gerenciador.persist(a2);
-        
-        //Finalizo a transação
+        //Commit na transação
         gerenciador.getTransaction().commit();
         
-        //Fechar o gerenciador
+        //fechar o gerenciador
         gerenciador.close();
         
     }

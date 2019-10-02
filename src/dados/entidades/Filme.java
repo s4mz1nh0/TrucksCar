@@ -3,15 +3,27 @@ package dados.entidades;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Objects;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
+@Entity
 public class Filme {
   
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    
     private String nome;
     private LocalDate dataDeLancamento;
     private BigDecimal arrecadacao;
+    
+    @OneToOne(optional=false)
     private Genero genero;
-    private ArrayList<Ator> atores;
+    
 
     public Integer getId() {
         return id;
@@ -53,12 +65,29 @@ public class Filme {
         this.genero = genero;
     }
 
-    public ArrayList<Ator> getAtores() {
-        return atores;
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 97 * hash + Objects.hashCode(this.id);
+        return hash;
     }
 
-    public void setAtores(ArrayList<Ator> atores) {
-        this.atores = atores;
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Filme other = (Filme) obj;
+        if (!Objects.equals(this.id, other.id)) {
+            return false;
+        }
+        return true;
     }
     
     

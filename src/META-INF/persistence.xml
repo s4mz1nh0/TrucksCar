@@ -12,6 +12,8 @@
 
         <!-- Aqui devem ser listadas todas as entidades criadas -->
         <class>dados.entidades.Ator</class>
+        <class>dados.entidades.Genero</class>
+        <class>dados.entidades.Filme</class>
          
 
         <properties>    
