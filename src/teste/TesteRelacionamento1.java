@@ -4,7 +4,6 @@ import dados.entidades.Filme;
 import dados.entidades.Genero;
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.time.Month;
 import javax.persistence.EntityManager;
 import util.JPAUtil;
 

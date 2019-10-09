@@ -3,12 +3,16 @@ package dados.entidades;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Filme {
@@ -21,9 +25,19 @@ public class Filme {
     private LocalDate dataDeLancamento;
     private BigDecimal arrecadacao;
     
-    @OneToOne(optional=false)
+    @ManyToOne(optional=false)
     private Genero genero;
     
+    @ManyToMany
+    private List<Ator> atores = new ArrayList<Ator>();
+
+    public List<Ator> getAtores() {
+        return atores;
+    }
+
+    public void setAtores(List<Ator> atores) {
+        this.atores = atores;
+    }
 
     public Integer getId() {
         return id;
