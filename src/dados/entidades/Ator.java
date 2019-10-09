@@ -14,6 +14,14 @@ public class Ator {
     private Integer id;
     
     private String nome;
+    
+    //Construtor vazio da JPA (OBRIGATÓRIO)
+    public Ator(){}
+    
+    //Construtor
+    public Ator(String n){
+        this.setNome(n);
+    }
   
     public Integer getId() {
         return id;

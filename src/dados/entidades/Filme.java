@@ -29,13 +29,13 @@ public class Filme {
     private Genero genero;
     
     @ManyToMany
-    private List<Ator> atores = new ArrayList<Ator>();
+    private Set<Ator> atores = new HashSet<Ator>();
 
-    public List<Ator> getAtores() {
+    public Set<Ator> getAtores() {
         return atores;
     }
 
-    public void setAtores(List<Ator> atores) {
+    public void setAtores(Set<Ator> atores) {
         this.atores = atores;
     }
 

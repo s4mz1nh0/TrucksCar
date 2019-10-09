@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.ator.JanelaAtorController">
-    
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="ui.ator.JanelaAtorController">
+   <children>
+      <JFXTextField fx:id="textFieldId" editable="false" labelFloat="true" layoutX="22.0" layoutY="16.0" prefHeight="31.0" prefWidth="69.0" promptText="Id" />
+      <JFXTextField fx:id="textFieldNome" labelFloat="true" layoutX="18.0" layoutY="81.0" prefHeight="31.0" prefWidth="564.0" promptText="Nome" />
+      <JFXButton layoutX="522.0" layoutY="129.0" onAction="#salvar" text="Salvar" />
+   </children>
 </AnchorPane>
