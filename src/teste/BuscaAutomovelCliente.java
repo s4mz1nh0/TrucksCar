@@ -1,28 +1,28 @@
 package teste;
 
-import dados.entidades.Ator;
-import dados.entidades.Filme;
+import dados.entidades.Cliente;
+import dados.entidades.Automovel;
 import javax.persistence.EntityManager;
 import util.JPAUtil;
 
-public class TestaBuscaFilmeAtor {
+public class BuscaAutomovelCliente {
     public static void main(String[] args) {
      
         //Pegando o gerenciador de acesso ao BD
         EntityManager gerenciador = JPAUtil.getGerenciador();
         
         //Bucar o filme de id 1
-        Filme f = gerenciador.find(Filme.class, 1);
+        Automovel a = gerenciador.find(Automovel.class, 1);
         
         //Imprimir o nome do Filme
-        System.out.println("Filme: " + f.getNome());
+        System.out.println("Automovel: " + a.getPorteDoAutomovel());
         
         //Imprimir o genero
-        System.out.println("Genero: " + f.getGenero().getNome());
+        System.out.println("Servicos: " + a.getServicos().getTiposDeLavagem());
         
         //Imprimindo o nome dos atores desse filme
-        for(Ator a : f.getAtores()){
-            System.out.println("Ator: " + a.getNome());
+        for(Cliente c : a.getClientes()){
+            System.out.println("Cliente: " + c.getNome());
         }
         
     }

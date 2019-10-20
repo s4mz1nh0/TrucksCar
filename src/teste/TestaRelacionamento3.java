@@ -1,7 +1,7 @@
 package teste;
 
-import dados.entidades.Ator;
-import dados.entidades.Filme;
+import dados.entidades.Cliente;
+import dados.entidades.Automovel;
 import javax.persistence.EntityManager;
 import util.JPAUtil;
 
@@ -12,15 +12,15 @@ public class TestaRelacionamento3 {
         EntityManager gerenciador = JPAUtil.getGerenciador();
         
         //Buscar 2 atores (tem que estar cadastrados no BD)
-        Ator a1 = gerenciador.find(Ator.class, 1);
-        Ator a2 = gerenciador.find(Ator.class, 2);
+        Cliente a1 = gerenciador.find(Cliente.class, 1);
+        Cliente a2 = gerenciador.find(Cliente.class, 2);
         
         //Buscar um filme no BD
-        Filme f = gerenciador.find(Filme.class, 1);
+        Automovel f = gerenciador.find(Automovel.class, 1);
         
         //Associando atores com o filme
-        f.getAtores().add(a1);
-        f.getAtores().add(a2);
+        f.getClientes().add(a1);
+        f.getClientes().add(a2);
         
         //Iniciar a transação, commit e fechar
         gerenciador.getTransaction().begin();

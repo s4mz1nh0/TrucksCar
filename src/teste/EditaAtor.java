@@ -1,6 +1,6 @@
 package teste;
 
-import dados.entidades.Ator;
+import dados.entidades.Cliente;
 import javax.persistence.EntityManager;
 import util.JPAUtil;
 
@@ -12,7 +12,7 @@ public class EditaAtor {
         EntityManager gerenciador = JPAUtil.getGerenciador();
         
         //Buscando um ator pelo id (segundo parametro)
-        Ator a = gerenciador.find(Ator.class, 1);
+        Cliente a = gerenciador.find(Cliente.class, 1);
         
         //Editando o nome (colocando um novo nome)
         a.setNome("Samuel Santana");

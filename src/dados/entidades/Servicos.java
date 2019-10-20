@@ -7,42 +7,33 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Ator {
+public class Servicos {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-    
-    private String nome;
-    
-    //Construtor vazio da JPA (OBRIGATÓRIO)
-    public Ator(){}
-    
-    //Construtor
-    public Ator(String n){
-        this.setNome(n);
-    }
-  
-    public Integer getId() {
-        return id;
+    private Integer id_Servicos; 
+   private String tiposDeLavagem;
+
+    public Integer getId_Servicos() {
+        return id_Servicos;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setId_Servicos(Integer id_Servicos) {
+        this.id_Servicos = id_Servicos;
     }
 
-    public String getNome() {
-        return nome;
+    public String getTiposDeLavagem() {
+        return tiposDeLavagem;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setTiposDeLavagem(String TiposDeLavagem) {
+        this.tiposDeLavagem = TiposDeLavagem;
     }
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 67 * hash + Objects.hashCode(this.id);
+        int hash = 7;
+        hash = 83 * hash + Objects.hashCode(this.id_Servicos);
         return hash;
     }
 
@@ -57,13 +48,13 @@ public class Ator {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Ator other = (Ator) obj;
-        if (!Objects.equals(this.id, other.id)) {
+        final Servicos other = (Servicos) obj;
+        if (!Objects.equals(this.id_Servicos, other.id_Servicos)) {
             return false;
         }
         return true;
     }
-    
+   
     
     
 }

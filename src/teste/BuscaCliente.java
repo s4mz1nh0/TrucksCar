@@ -1,10 +1,10 @@
 package teste;
 
-import dados.entidades.Ator;
+import dados.entidades.Cliente;
 import javax.persistence.EntityManager;
 import util.JPAUtil;
 
-public class TesteBuscaAtor {
+public class BuscaCliente {
    
     public static void main(String[] args) {
         
@@ -12,10 +12,10 @@ public class TesteBuscaAtor {
         EntityManager gerenciador = JPAUtil.getGerenciador();
         
         //Buscando um ator pelo id (segundo parametro)
-        Ator a = gerenciador.find(Ator.class, 1);
+        Cliente c = gerenciador.find(Cliente.class, 1);
         
         //Imprimindo o nome do ator
-        System.out.println("Nome: " + a.getNome());
+        System.out.println("Nome: " + c.getNome());
         
         //Fechar o gerenciador
         gerenciador.close();

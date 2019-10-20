@@ -1,7 +1,7 @@
 package ui.ator;
 
 import com.jfoenix.controls.JFXTextField;
-import dados.entidades.Ator;
+import dados.entidades.Cliente;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -40,7 +40,7 @@ public class JanelaAtorController implements Initializable {
         
         //Pega os dados do fomulário
         //e cria um objeto ator
-        Ator a = new Ator(textFieldNome.getText());
+        Cliente a = new Cliente(textFieldNome.getText());
         
         //Mandar o ator para a camada de servico
         servico.salvar(a);
